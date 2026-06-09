@@ -1,0 +1,61 @@
+# ─────────────────────────────────────────
+#  UMS — .gitignore
+#  Java Servlet / JSP / Eclipse Project
+# ─────────────────────────────────────────
+
+# ── Eclipse project files (machine-specific, don't commit) ──
+.metadata/
+.settings/
+.classpath
+.project
+*.launch
+*.prefs
+
+# ── Compiled Java class files ──
+build/
+bin/
+out/
+*.class
+
+# ── WAR / JAR / EAR build outputs ──
+*.war
+*.jar
+*.ear
+!src/main/webapp/WEB-INF/lib/*.jar
+
+# ── Maven / Gradle ──
+target/
+.gradle/
+pom.xml.tag
+pom.xml.releaseBackup
+
+# ── Uploaded images (runtime files, not source) ──
+src/main/webapp/images/*
+!src/main/webapp/images/.gitkeep
+
+# ── OS files ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE / Editor ──
+*.iml
+*.ipr
+*.iws
+.idea/
+*.vscode/
+*.swp
+*.swo
+
+# ── Logs ──
+*.log
+logs/
+
+# ── Tomcat work directory ──
+work/
+temp/
+
+# ── Environment / Secrets (if you ever add these) ──
+.env
+*.properties.local
+application-local.*
