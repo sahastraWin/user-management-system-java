@@ -94,36 +94,36 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                  Apache Tomcat 10 (Servlet Container)           │
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                    VIEW LAYER (JSP)                     │   │
-│  │  signIn.jsp  │  adminIndex.jsp  │  personDashboard.jsp  │   │
-│  │  registration.jsp  │  userDashboard.jsp  │  ...         │   │
-│  └─────────────────────┬───────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │                    VIEW LAYER (JSP)                     │    │
+│  │  signIn.jsp  │  adminIndex.jsp  │  personDashboard.jsp  │    │
+│  │  registration.jsp  │  userDashboard.jsp  │  ...         │    │
+│  └─────────────────────┬───────────────────────────────────┘    │
 │                        │  forward / include                     │
-│  ┌─────────────────────▼───────────────────────────────────┐   │
-│  │               CONTROLLER LAYER (Servlets)               │   │
-│  │                                                         │   │
-│  │  LoginController    @WebServlet /login/LoginController  │   │
-│  │  PersonController   @WebServlet /person/personCntrl     │   │
-│  │  CityController     @WebServlet /city/cityCntrl         │   │
-│  │  StateController    @WebServlet /state/stateCntrl       │   │
-│  │  GenderController   @WebServlet /gender/genderCntrl     │   │
-│  │  QualController     @WebServlet /qualification/...      │   │
-│  │  StateCityController @WebServlet /statecity/...         │   │
-│  └─────────────────────┬───────────────────────────────────┘   │
+│  ┌─────────────────────▼───────────────────────────────────┐    │
+│  │               CONTROLLER LAYER (Servlets)               │    │
+│  │                                                         │    │
+│  │  LoginController    @WebServlet /login/LoginController  │    │
+│  │  PersonController   @WebServlet /person/personCntrl     │    │
+│  │  CityController     @WebServlet /city/cityCntrl         │    │
+│  │  StateController    @WebServlet /state/stateCntrl       │    │
+│  │  GenderController   @WebServlet /gender/genderCntrl     │    │
+│  │  QualController     @WebServlet /qualification/...      │    │
+│  │  StateCityController @WebServlet /statecity/...         │    │
+│  └─────────────────────┬───────────────────────────────────┘    │
 │                        │  calls                                 │
-│  ┌─────────────────────▼───────────────────────────────────┐   │
-│  │                  DAO LAYER (DBServices)                  │   │
-│  │                                                         │   │
-│  │  LoginDBService  │  PersonDBService  │  CityDBService   │   │
-│  │  StateDBService  │  GenderDBService  │  QualDBService   │   │
-│  │  StateCityDBService                                     │   │
-│  └─────────────────────┬───────────────────────────────────┘   │
+│  ┌─────────────────────▼───────────────────────────────────┐    │
+│  │                  DAO LAYER (DBServices)                 │    │
+│  │                                                         │    │
+│  │  LoginDBService  │  PersonDBService  │  CityDBService   │    │
+│  │  StateDBService  │  GenderDBService  │  QualDBService   │    │
+│  │  StateCityDBService                                     │    │
+│  └─────────────────────┬───────────────────────────────────┘    │
 │                        │  JDBC                                  │
-│  ┌─────────────────────▼───────────────────────────────────┐   │
-│  │              DBConfig (Connection Factory)               │   │
-│  │         jdbc:mysql://localhost:3306/ums                  │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────▼───────────────────────────────────┐    │
+│  │              DBConfig (Connection Factory)              │    │
+│  │         jdbc:mysql://localhost:3306/ums                 │    │
+│  └─────────────────────────────────────────────────────────┘    │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
